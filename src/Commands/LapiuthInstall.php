@@ -38,8 +38,7 @@ class LapiuthInstall extends Command
     public function handle()
     {
         $this->info('Publish all required components.');
-        $this->call('vendor:publish', ['--tag' => 'config']);
-        $this->call('vendor:publish', ['--tag' => 'controllers']);
+        $this->call('vendor:publish', ['--provider' => 'Datakrama\Lapiuth\LapiresServiceProvider']);
         $this->info('Done.');
     }
 }

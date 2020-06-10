@@ -3,9 +3,9 @@
 namespace Datakrama\Lapiuth;
 
 use Datakrama\Lapiuth\Commands\LapiuthInstall;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as DefaultServiceProvider;
 
-class LapiuthServiceProvider extends ServiceProvider
+class ServiceProvider extends DefaultServiceProvider
 {
     /**
      * Register any application services.
@@ -24,6 +24,8 @@ class LapiuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->app->register(RouteServiceProvider::class);
+
         if ($this->app->runningInConsole()) {
             $this->commands([
                 LapiuthInstall::class,
