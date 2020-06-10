@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\API\Auth;
+namespace Datakrama\Lapiuth\Controllers\API\Auth;
 
 use App\User;
-use App\Http\Controllers\Controller;
+use Datakrama\Lapiuth\Controllers\Controller;
 use Datakrama\Lapiuth\Traits\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

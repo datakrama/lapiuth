@@ -26,19 +26,9 @@ class ServiceProvider extends DefaultServiceProvider
     {
         $this->app->register(RouteServiceProvider::class);
 
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                LapiuthInstall::class,
-            ]);
-        }
-
         $this->publishes([
             __DIR__.'/config/frontend.php' => config_path('frontend.php'),
         ], 'config');
-
-        $this->publishes([
-            __DIR__.'/Controllers' => app_path('Http/Controllers'),
-        ], 'controllers');
 
         $this->loadViewsFrom(__DIR__.'/views', 'lapiuth');
 

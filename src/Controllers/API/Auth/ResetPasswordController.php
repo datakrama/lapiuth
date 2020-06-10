@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\API\Auth;
+namespace Datakrama\Lapiuth\Controllers\API\Auth;
 
-use App\Http\Controllers\Controller;
+use Datakrama\Lapiuth\Controllers\Controller;
 use Datakrama\Lapiuth\Traits\ResetsPasswords;
 
 class ResetPasswordController extends Controller

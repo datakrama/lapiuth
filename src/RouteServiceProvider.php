@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = 'Datakrama\Lapiuth\Controllers';
 
     /**
      * Define the "api" routes for the application.
@@ -28,6 +28,6 @@ class RouteServiceProvider extends ServiceProvider
         Route::prefix('api')
              ->middleware('api')
              ->namespace($this->namespace)
-             ->group( __DIR__ . 'routes/api.php');
+             ->group( __DIR__ . '/routes/api.php');
     }
 }
