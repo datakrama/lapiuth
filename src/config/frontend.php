@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'url' => env('FRONTEND_PASSWORD_RESET_URL', '/email/verify?queryURL='),
+    'password_reset_url' => env('FRONTEND_PASSWORD_RESET_URL', '/password/reset/'),
 
      /*
     |--------------------------------------------------------------------------
@@ -33,6 +33,6 @@ return [
     |
     */
 
-    'url' => env('FRONTEND_EMAIL_VERIFY_URL', '/password/reset/'),
+    'email_verify_url' => env('FRONTEND_EMAIL_VERIFY_URL', '/email/verify?queryURL='),
 
 ];

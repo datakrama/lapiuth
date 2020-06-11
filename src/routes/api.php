@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::namespace('API')->name('api.')->group(function () {
     // Auth
     Route::namespace('Auth')->prefix('auth')->name('auth.')->group(function () {
-        Route::post('login', 'LoginController@login');
-        Route::post('register', 'RegisterController@register');
+        Route::post('login', 'LoginController@login')->name('login');
+        Route::post('register', 'RegisterController@register')->name('register');
 
-        Route::prefix('password')->group(function () {
-            Route::post('email', 'ForgotPasswordController@@sendResetLinkEmail');
-            Route::post('reset', 'ResetPasswordController@reset');
+        Route::prefix('password')->name('password.')->group(function () {
+            Route::post('email', 'ForgotPasswordController@sendResetLinkEmail')->name('email');
+            Route::post('reset', 'ResetPasswordController@reset')->name('update');
         });
 
         Route::middleware('auth:api')->group(function () {
@@ -31,8 +31,8 @@ Route::namespace('API')->name('api.')->group(function () {
                 Route::post('resend', 'VerificationController@resend')->name('resend');
             });
 
-            Route::get('user', 'LoginController@user');
-            Route::get('logout', 'LoginController@logout');
+            Route::get('user', 'LoginController@user')->name('user');
+            Route::get('logout', 'LoginController@logout')->name('logout');
         });
     });
 });
