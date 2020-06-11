@@ -35,7 +35,8 @@ class VerifyEmailRequest extends VerifyEmail
      */
     protected function verificationUrl($notifiable)
     {
-        return URL::temporarySignedRoute(
+        $prefix = config('frontend.url') . config('frontend.email_verify_url');
+        $temporarySignedRoute = URL::temporarySignedRoute(
             'api.auth.verification.verify',
             Carbon::now()->addMinutes(Config::get('auth.verification.expire', 60)),
             [
@@ -43,6 +44,7 @@ class VerifyEmailRequest extends VerifyEmail
                 'hash' => sha1($notifiable->getEmailForVerification()),
             ]
         );
+        return $prefix . urlencode($temporarySignedRoute);
     }
 
     /**
