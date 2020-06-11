@@ -38,8 +38,7 @@ class ResetPassword extends Mailable
         return $this->subject(__('Reset Password Notification'))
                     ->markdown('lapiuth::email.user.password.reset')
                     ->with([
-                        'url' => env('CLIENT_URL', env('APP_URL')),
-                        'token' => $this->token,
+                        'url' => config('frontend.url') . config('frontend.password_reset_url') . $this->token,
                         'count' => config('auth.passwords.'.config('auth.defaults.passwords').'.expire')
                     ]);
     }
