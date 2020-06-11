@@ -3,6 +3,7 @@
 namespace Datakrama\Lapiuth;
 
 use Datakrama\Lapiuth\Commands\LapiuthInstall;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider as DefaultServiceProvider;
 
 class ServiceProvider extends DefaultServiceProvider
@@ -24,14 +25,29 @@ class ServiceProvider extends DefaultServiceProvider
      */
     public function boot()
     {
-        $this->app->register(RouteServiceProvider::class);
-
         $this->publishes([
             __DIR__.'/config/frontend.php' => config_path('frontend.php'),
         ], 'config');
 
         $this->loadViewsFrom(__DIR__.'/views', 'lapiuth');
+        
+        $this->mapApiRoutes();
+    }
 
-        $this->loadRoutesFrom(__DIR__.'/routes/api.php');
+    /**
+     * Define the "api" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapApiRoutes()
+    {
+        Route::prefix('api')
+             ->middleware('api')
+             ->namespace('Datakrama\Lapiuth\Controllers')
+             ->group(function () {
+                $this->loadRoutesFrom(__DIR__.'/routes/api.php');
+             });
     }
 }
