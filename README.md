@@ -11,6 +11,8 @@ Lapiuth is ready-to-use authentication library for Laravel based API server. Thi
 
 ## Installation
 
+> Before using this package, make sure you have set your Passport Personal Access Token. You can see the documentation at [https://laravel.com/docs/6.x/passport](https://laravel.com/docs/6.x/passport)
+
 $ `composer require datakrama/lapiuth`
 
 ## Usages
