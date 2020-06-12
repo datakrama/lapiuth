@@ -10,7 +10,7 @@
         processIsolation="false"
         stopOnFailure="false">
     <testsuites>
-        <testsuite name="Eloquid Test">
+        <testsuite name="Lapiuth Test">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
