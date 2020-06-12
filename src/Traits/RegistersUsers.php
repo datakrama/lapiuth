@@ -49,7 +49,7 @@ trait RegistersUsers
         ];
 
         return $this->registered($request, $user)
-                        ?: $this->successResponse($data);
+                        ?: $this->successResponse($data, null, 201);
     }
 
     /**
