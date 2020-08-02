@@ -1,25 +1,29 @@
 ## Lapiuth - Laravel API Auth
+
+![Run Tests](https://github.com/datakrama/lapiuth/workflows/Run%20Tests/badge.svg)
+
 As we all know, Laravel provides built-in features for authentication. But, that's only for the web, not the API. Because of this, Lapiuth was made.
 
 Lapiuth is ready-to-use authentication library for Laravel based API server. This library is simple. But, it can still help our work. We hope so for you.
 
 ## Requirements
-- [Laravel 6.x](https://github.com/laravel/laravel)
+- [Laravel 7.x](https://github.com/laravel/laravel)
 - [Passport 8.x](https://github.com/laravel/passport)
 - [Personal Access Tokens with Passport](https://laravel.com/docs/6.x/passport#personal-access-tokens)
-- [Lapires 1.x](https://github.com/datakrama/lapires)
+- [Lapires 2.x](https://github.com/datakrama/lapires)
 
 ## Laravel Compatibility
 
 |   Laravel                             | Package                                               |
 | ------------------------------------- | ----------------------------------------------------- |
 | [6.x](https://laravel.com/docs/6.x)   | [1.x](https://github.com/datakrama/lapiuth/tree/v1)   |
+| [7.x](https://laravel.com/docs/7.x)   | [2.x](https://github.com/datakrama/lapiuth/tree/v2)   |
 
 ## Installation
 
-> Before using this package, make sure you have set your Passport Personal Access Token. You can see the documentation at [https://laravel.com/docs/6.x/passport](https://laravel.com/docs/6.x/passport)
+> Before using this package, make sure you have set your Passport Personal Access Token. You can see the documentation at [https://laravel.com/docs/7.x/passport](https://laravel.com/docs/7.x/passport)
 
-$ `composer require datakrama/lapiuth:"~1.0"`
+$ `composer require datakrama/lapiuth:"~2.0"`
 
 ## Usages
 

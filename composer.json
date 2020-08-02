@@ -3,12 +3,12 @@
     "description": "Laravel API Auth, change the default authentication to API-friendly",
     "type": "library",
     "require": {
-        "illuminate/support": "^6.0",
-        "datakrama/lapires": "^1.0",
+        "illuminate/support": "^7.0",
+        "datakrama/lapires": "^2.0",
         "laravel/passport": "^8.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0",
+        "orchestra/testbench": "^5.0",
         "phpunit/phpunit": "^9.3@dev"
     },
     "license": "MIT",
