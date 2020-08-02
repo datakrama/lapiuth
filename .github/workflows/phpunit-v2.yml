@@ -1,4 +1,4 @@
-name: Laravel 6.x tests
+name: Laravel 7.x tests
 
 on:
   push:
