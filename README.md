@@ -86,8 +86,5 @@ class User extends Authenticatable implements MustVerifyEmail
 }
 ```
 
-## Credit
-- [Ahmad Husen](https://github.com/husenisme)
-
 # Licence
 The MIT License (MIT). Please see [License File](https://github.com/datakrama/lapiuth/blob/master/LICENSE.md "License File") for more information.
