@@ -1,4 +1,4 @@
-## Lapiuth - Laravel API Auth
+# [Abandoned] Lapiuth - Laravel API Auth
 
 ![Run Tests](https://github.com/datakrama/lapiuth/workflows/Run%20Tests/badge.svg)
 
